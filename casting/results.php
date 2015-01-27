@@ -2,25 +2,32 @@
 require_once("../inc/config.php");
 include("../inc/servicios.php");
 // getting filter selection from prior page
-$voice = $_POST["voice"];
-
+if (isset($_POST["voice"])){
+	$voice = $_POST["voice"];
+	$voices = ($voice == 'I'? 'infantiles' : ($voice == 'F' ? 'femeninas' : 'masculinas'));
 // When voice equal Infantil, the character is emtpy
-if($voice == 'I'){
-	$character = "";
+	if($voice == 'I'){
+		$character = "";
+	} else {
+		$character = (isset($_POST["character"]) ? $_POST["character"] : "") ;
+	}
 } else {
-	$character = $_POST["character"];
+	$voice = "";
+	$voices = "";
+	$character = "";
 }
 
 $character_desc = "";
-$voices = ($voice == 'I'? 'infantiles' : ($voice == 'F' ? 'femeninas' : 'masculinas'));
 $pageTitle = "Conoce nuestros talentos";
 include("../inc/headerCasting.php");
 ?>
 	<div align="center" >
 		<div class="showSelectedOp" > 
 			<p>
+			<?php if ($voices != "") { ?>
 			<?php echo '<b style="color:#BDBDBD;" >voces </b><b>' . $voices . '</b>' ?>
 			<?php if ($voice != 'I') echo '<b style="color:#BDBDBD;"> con caracter </b><b>' . $character_desc . '</b>'; ?>
+			<?php } ?>
 			</p>
 		</div>	
 		<div class="resultsArea" >		
