@@ -1,0 +1,120 @@
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	background:white; 
+	min-height:450px; 
+	width:100%;
+	margin-top:15px;
+	padding-top:15px;
+	padding-bottom:20px;	
+}
+.imgNuevo {
+	margin-top:15px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.imgNuevo:hover, .imgEdit:hover, .imgSetting:hover{
+	background-color: rgb(82, 227, 128);
+}
+.imgSetting{
+	margin-right:0px;
+}
+
+.imgEdit, .imgDelProfile{
+	margin-right:0px;
+	float: right;
+	height:50px;
+	width:60px;
+}
+
+.divNombre{
+	width:550px;
+	text-align: left;
+	margin-top: 15px;
+	margin-left: 30px;
+	text-transform: uppercase;
+}
+.divNombre:hover  + .imgSetting{
+	background-color: rgb(82, 227, 128);
+}
+.divRow {
+	width:		600px;
+	height:		50px;
+	display:	flex;
+	border-bottom:1px solid #ccc;
+}
+.admin{
+	width:		250px;
+	height: 	35px;	
+	vertical-align: middle;
+	font-size:	12px;
+}
+.imgDelete, .imgUploadDiv{
+	margin-right:0px;
+}
+.imgDelete:hover{
+	background-color:red;
+}
+
+.imgDelProfile:hover{
+	background-color:red;
+}
+
+.imgUploadDiv:hover{
+	background-color:#52e380;
+}
+
+.h1-admin {
+	font-size: 24px;
+	margin: 0;
+}
+
+p {
+	margin-bottom: 5px;
+	font-family: 'Open Sans', sans-serif;
+	color: #5c5c5c;
+	font-size: 15px;
+	line-height: 150%;
+	font-weight: 400;
+}
+
+.div-search {
+	padding-right:		20px;
+}
+
+.info{
+	width:600px;
+	min-height:80px;
+	float:center;
+	display: block;
+	margin-bottom:20px;
+	text-align: left;
+	text-transform:uppercase;
+}
+
+.edit{
+	width: 		100%;
+	height: 	35px;
+	vertical-align: middle;
+}
+
+.btnAdmin{
+	width: 		285px;
+	height: 	50px;
+}
+
+.divInfo{
+	width:100%;
+}
+.divInfo label {
+	margin: 	0 0 0 10px;
+}
+
+.sideBtn{
+	margin: 	5px;
+	width: 		55px;
+	height: 	35px;
+	background-color: gray;
+	color: 		white;
+	font-size: 	15px;
+}
